@@ -1,0 +1,6 @@
+total 5
+drwxr-xr-x   - -       -            - css/
+drwxr-xr-x   - -       -            - js/
+-rw-r--r--   1 user user    56594 Oct 25 17:27 index.html
+-rw-r--r--   1 user user    12276 Oct 25 17:35 README.md
+-rw-r--r--   1 user user    11762 Oct 25 17:36 SETUP.md
