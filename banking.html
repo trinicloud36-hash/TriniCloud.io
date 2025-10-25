@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Your Dragon AI Payment</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding-top: 40px;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 16px;
+            opacity: 0.95;
+            margin-top: 15px;
+        }
+
+        .payment-card {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 25px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .step {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 20px;
+            border-left: 6px solid #667eea;
+        }
+
+        .step h2 {
+            color: #667eea;
+            font-size: 24px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .step-number {
+            background: #667eea;
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .bank-details {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 3px solid #00ff88;
+        }
+
+        .bank-details h3 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 17px;
+        }
+
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+
+        .detail-label {
+            color: #666;
+            font-weight: 600;
+        }
+
+        .detail-value {
+            color: #000;
+            font-weight: bold;
+            font-size: 19px;
+            text-align: right;
+        }
+
+        .highlight {
+            color: #667eea;
+            font-size: 22px;
+        }
+
+        .amount-highlight {
+            color: #00ff88;
+            font-size: 28px;
+            text-shadow: 0 2px 4px rgba(0,255,136,0.3);
+        }
+
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-size: 15px;
+            color: #856404;
+        }
+
+        .proof-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            color: #333;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .file-upload {
+            position: relative;
+            overflow: hidden;
+            background: #f8f9fa;
+            border: 2px dashed #667eea;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .file-upload:hover {
+            background: #e9ecef;
+            border-color: #764ba2;
+        }
+
+        .file-upload input[type="file"] {
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .file-upload-text {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .support-box {
+            background: #d4edda;
+            border: 2px solid #28a745;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .support-box h3 {
+            color: #155724;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #25D366;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+
+        .copy-btn {
+            background: #667eea;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .copy-btn:hover {
+            background: #5568d3;
+        }
+
+        .success-message {
+            display: none;
+            background: #d4edda;
+            border: 2px solid #28a745;
+            color: #155724;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 32px;
+            }
+
+            .payment-card {
+                padding: 25px;
+            }
+
+            .step {
+                padding: 20px;
+            }
+
+            .detail-row {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .detail-value {
+                text-align: left;
+                margin-top: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🐉 Complete Your Dragon AI Payment</h1>
+            <div class="trust-badge">
+                <span>🔒 Secure Trinidad Banking</span>
+                <span>•</span>
+                <span>🇹🇹 No Credit Card Required</span>
+            </div>
+        </div>
+
+        <div class="payment-card">
+            <!-- Step 1: Make Payment -->
+            <div class="step">
+                <h2>
+                    <span class="step-number">1</span>
+                    Transfer Your Payment
+                </h2>
+                
+                <div class="bank-details">
+                    <h3>Republic Bank Trinidad & Tobago</h3>
+                    
+                    <div class="detail-row">
+                        <span class="detail-label">Bank:</span>
+                        <span class="detail-value">Republic Bank Limited</span>
+                    </div>
+                    
+                    <div class="detail-row">
+                        <span class="detail-label">Account Number:</span>
+                        <span class="detail-value highlight">320 062 065 1101</span>
+                        <button class="copy-btn" onclick="copyToClipboard('320 062 065 1101')">Copy</button>
+                    </div>
+                    
+                    <div class="detail-row">
+                        <span class="detail-label">Account Name:</span>
+                        <span class="detail-value">Dragon AI Services</span>
+                    </div>
+                    
+                    <div class="detail-row">
+                        <span class="detail-label">Branch:</span>
+                        <span class="detail-value">84-86 Eastern Main Road, Sangre Grande</span>
+                    </div>
+                    
+                    <div class="detail-row">
+                        <span class="detail-label">Amount Due:</span>
+                        <span class="detail-value amount-highlight" id="payment-amount">TT$ 99.00</span>
+                    </div>
+                    
+                    <div class="detail-row">
+                        <span class="detail-label">Your Reference:</span>
+                        <span class="detail-value highlight" id="customer-reference">DRAG-XXXXX</span>
+                        <button class="copy-btn" onclick="copyReference()">Copy</button>
+                    </div>
+                </div>
+
+                <div class="note">
+                    💡 <strong>Important:</strong> Use your reference number in the payment description so we can identify your payment quickly. Available via Republic Online, ATM, or branch deposit.
+                </div>
+            </div>
+
+            <!-- Step 2: Submit Proof -->
+            <div class="step">
+                <h2>
+                    <span class="step-number">2</span>
+                    Submit Proof of Payment
+                </h2>
+
+                <form id="payment-proof-form" class="proof-form">
+                    <div class="form-group">
+                        <label for="transaction-ref">Transaction/Receipt Number *</label>
+                        <input type="text" id="transaction-ref" name="transaction_ref" 
+                               placeholder="Enter the transaction reference from your receipt" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="payment-date">Date of Payment *</label>
+                        <input type="date" id="payment-date" name="payment_date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="whatsapp">WhatsApp Number (for confirmation) *</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" 
+                               placeholder="+1-868-XXX-XXXX" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" 
+                               placeholder="your@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Upload Receipt Photo/Screenshot *</label>
+                        <div class="file-upload">
+                            <input type="file" id="receipt" name="receipt" accept="image/*" required onchange="updateFileName()">
+                            <div class="file-upload-text" id="file-upload-text">
+                                📸 Click to upload receipt<br>
+                                <small style="color: #999;">JPG, PNG, or PDF accepted</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit Payment Proof →</button>
+                </form>
+
+                <div id="success-message" class="success-message">
+                    ✅ Payment proof submitted successfully! We'll verify and send your API key within 2 hours.
+                </div>
+            </div>
+
+            <!-- Step 3: Activation -->
+            <div class="step">
+                <h2>
+                    <span class="step-number">3</span>
+                    Account Activation
+                </h2>
+                
+                <p style="color: #666; font-size: 16px; line-height: 1.8; margin-bottom: 20px;">
+                    Our Trinidad-based team verifies payments <strong>Monday to Friday, 9 AM - 5 PM</strong>. 
+                    You'll receive your Dragon AI API key and dashboard access via WhatsApp and email within 
+                    <strong>2 hours</strong> during business hours.
+                </p>
+
+                <div class="support-box">
+                    <h3>Need Help? We're Here!</h3>
+                    <p style="color: #155724; margin-bottom: 15px;">Contact our Trinidad support team</p>
+                    <a href="https://wa.me/18681234567?text=Hi,%20I%20need%20help%20with%20my%20Dragon%20AI%20payment" 
+                       class="whatsapp-btn" target="_blank">
+                        💬 WhatsApp Support
+                    </a>
+                    <p style="margin-top: 15px; font-size: 14px; color: #666;">
+                        Or email: support@dragonai.tt
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Generate unique customer reference
+        function generateReference() {
+            return 'DRAG-' + Math.random().toString(36).substring(2, 8).toUpperCase();
+        }
+        
+        const customerRef = generateReference();
+        document.getElementById('customer-reference').textContent = customerRef;
+
+        // Copy to clipboard function
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('✅ Copied: ' + text);
+            });
+        }
+
+        function copyReference() {
+            copyToClipboard(customerRef);
+        }
+
+        // Update file name display
+        function updateFileName() {
+            const input = document.getElementById('receipt');
+            const text = document.getElementById('file-upload-text');
+            if (input.files.length > 0) {
+                text.innerHTML = `✅ ${input.files[0].name}<br><small style="color: #28a745;">File ready to upload</small>`;
+            }
+        }
+
+        // Handle form submission
+        document.getElementById('payment-proof-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const submitBtn = e.target.querySelector('.submit-btn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+            
+            const formData = new FormData(e.target);
+            formData.append('customer_reference', customerRef);
+            
+            try {
+                // In production, send to your backend
+                // const response = await fetch('/api/payment-proof', {
+                //     method: 'POST',
+                //     body: formData
+                // });
+                
+                // Simulate successful submission
+                setTimeout(() => {
+                    document.getElementById('success-message').style.display = 'block';
+                    submitBtn.textContent = '✅ Submitted Successfully';
+                    e.target.reset();
+                    
+                    // Scroll to success message
+                    document.getElementById('success-message').scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'center' 
+                    });
+                }, 1500);
+                
+            } catch (error) {
+                alert('❌ Error submitting payment proof. Please try again or contact support.');
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Payment Proof →';
+            }
+        });
+
+        // Set today's date as max for payment date
+        document.getElementById('payment-date').max = new Date().toISOString().split('T')[0];
+    </script>
+</body>
+</html>
