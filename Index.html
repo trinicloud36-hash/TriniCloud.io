@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+...
+            });
+        });
+    </script>
+</body>
+</html>
+Tool Call
+Function Name:
+Write
+Arguments:
+file_path:
+/home/user/contact.html
+content:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Jogania Enterprise AI Platform | Trinidad & Tobago</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'jogania': '#0d9488',
+                        'tt-red': '#CE1126',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'display': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #0d9488 0%, #06b6d4 50%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #0d9488 0%, #06b6d4 100%);
+        }
+
+        .contact-form {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .floating-label {
+            transition: all 0.3s ease;
+        }
+
+        .form-field:focus + .floating-label,
+        .form-field:not(:placeholder-shown) + .floating-label {
+            transform: translateY(-1.5rem) scale(0.875);
+            color: #0d9488;
+        }
+    </style>
+</head>
+
+<body class="font-sans text-gray-900 bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center text-white font-bold text-xl">
+                        J
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-display font-bold gradient-text">Jogania</h1>
+                        <p class="text-xs text-gray-600">AI Platform 🇹🇹</p>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-gray-700 hover:text-jogania font-medium transition">Home</a>
+                    <a href="features.html" class="text-gray-700 hover:text-jogania font-medium transition">Features</a>
+                    <a href="pricing.html" class="text-gray-700 hover:text-jogania font-medium transition">Pricing</a>
+                    <a href="legal.html" class="text-gray-700 hover:text-jogania font-medium transition">Legal</a>
+                    <a href="faq.html" class="text-gray-700 hover:text-jogania font-medium transition">FAQ</a>
+                    <a href="contact.html" class="text-jogania font-medium">Contact</a>
+                </div>
+                
+                <div class="flex items-center gap-4">
+                    <a href="#" class="hidden md:block text-gray-700 hover:text-jogania font-medium transition">Login</a>
+                    <a href="#" class="gradient-bg text-white px-6 py-2.5 rounded-xl font-semibold shadow-lg hover:shadow-xl transition">
+                        Get Started Free
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="pt-32 pb-12 bg-gradient-to-r from-jogania to-cyan-600">
+        <div class="max-w-7xl mx-auto px-6 text-center text-white">
+            <div class="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold mb-6">
+                💬 Get in Touch with Our Team
+            </div>
+            <h1 class="text-5xl font-bold mb-6">Contact Jogania</h1>
+            <p class="text-xl opacity-90 max-w-3xl mx-auto">
+                Ready to transform your Trinidad & Tobago business with AI? Our local team is here to help you get started.
+            </p>
+        </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-6 py-12">
+        <!-- Contact Options Grid -->
+        <div class="grid lg:grid-cols-3 gap-8 mb-16">
+            <!-- Contact Form -->
+            <div class="lg:col-span-2">
+                <div class="bg-white rounded-2xl contact-form p-8 border border-gray-200">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">Send us a Message</h2>
+                    <p class="text-gray-600 mb-8">Fill out the form below and we'll get back to you within 24 hours.</p>
+                    
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <!-- First Name -->
+                            <div class="relative">
+                                <input 
+                                    type="text" 
+                                    id="firstName" 
+                                    class="form-field w-full px-4 py-4 border-2 border-gray-300 rounded-lg focus:border-jogania focus:outline-none placeholder-transparent"
+                                    placeholder="First Name"
+                                    required
+                                >
+                                <label for="firstName" class="floating-label absolute left-4 top-4 text-gray-500 pointer-events-none">
+                                    First Name *
+                                </label>
+                            </div>
+                            
+                            <!-- Last Name -->
+                            <div class="relative">
+                                <input 
+                                    type="text" 
+                                    id="lastName" 
+                                    class="form-field w-full px-4 py-4 border-2 border-gray-300 rounded-lg focus:border-jogania focus:outline-none placeholder-transparent"
+                                    placeholder="Last Name"
+                                    required
+                                >
+                                <label for="lastName" class="floating-label absolute left-4 top-4 text-gray-500 pointer-events-none">
+                                    Last Name *
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <!-- Email -->
+                            <div class="relative">
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    class="form-field w-full px-4 py-4 border-2 border-gray-300 rounded-lg focus:border-jogania focus:outline-none placeholder-transparent"
+                                    placeholder="Email Address"
+                                    required
+                                >
+                                <label for="email" class="floating-label absolute left-4 top-4 text-gray-500 pointer-events-none">
+                                    Email Address *
+                                </label>
+                            </div>
+                            
+                            <!-- Phone -->
+                            <div class="relative">
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    class="form-field w-full px-4 py-4 border-2 border-gray-300 rounded-lg focus:border-jogania focus:outline-none placeholder-transparent"
+                                    placeholder="Phone Number"
+                                >
+                                <label for="phone" class="floating-label absolute left-4 top-4 text-gray-500 pointer-events-none">
+                                    Phone Number (Optional)
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <!-- Company -->
+                            <div class="relative">
+                                <input 
+                                    type="text" 
+                                    id="company" 
+                                    class="form-field w-full px-4 py-4 border-2 border-gray-300 rounded-lg focus:border-jogania focus:outline-none placeholder-transparent"
+                                    placeholder="Company Name"
+                                    required
+                                >
+                                <label for="company" class="floating-label absolute left-4 top-4 text-gray-500 pointer-events-none">
+                                    Company Name *
+                                </label>
+                            </div>
+                            
+                            <!-- Industry -->
+                            <div class="relative">
+                                <select 
+                                    id="industry" 
+                                    class="form-field w-full px-4 py-4 border-2 border-gray-300 rounded-lg focus:border-jogania focus:outline-none"
+                                    required
+                                >
+                                    <option value="">Select Industry</option>
+                                    <option value="retail">Retail & E-Commerce</option>
+                                    <option value="hospitality">Hotels & Tourism</option>
+                                    <option value="healthcare">Healthcare & Medical</option>
+                                    <option value="financial">Financial Services</option>
+                                    <option value="education">Education</option>
+                                    <option value="real-estate">Real Estate</option>
+                                    <option value="manufacturing">Manufacturing</option>
+                                    <option value="professional">Professional Services</option>
+                                    <option value="government">Government</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Inquiry Type -->
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-3">What can we help you with? *</label>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <label class="flex items-center p-4 border-2 border-gray-300 rounded-lg cursor-pointer hover:border-jogania transition">
+                                    <input type="radio" name="inquiry" value="demo" class="mr-3 text-jogania focus:ring-jogania" required>
+                                    <div>
+                                        <div class="font-medium text-gray-800">Request Demo</div>
+                                        <div class="text-sm text-gray-600">See Jogania in action</div>
+                                    </div>
+                                </label>
+                                
+                                <label class="flex items-center p-4 border-2 border-gray-300 rounded-lg cursor-pointer hover:border-jogania transition">
+                                    <input type="radio" name="inquiry" value="pricing" class="mr-3 text-jogania focus:ring-jogania">
+                                    <div>
+                                        <div class="font-medium text-gray-800">Pricing Information</div>
+                                        <div class="text-sm text-gray-600">Get custom pricing</div>
+                                    </div>
+                                </label>
+                                
+                                <label class="flex items-center p-4 border-2 border-gray-300 rounded-lg cursor-pointer hover:border-jogania transition">
+                                    <input type="radio" name="inquiry" value="technical" class="mr-3 text-jogania focus:ring-jogania">
+                                    <div>
+                                        <div class="font-medium text-gray-800">Technical Support</div>
+                                        <div class="text-sm text-gray-600">Need help with setup</div>
+                                    </div>
+                                </label>
+                                
+                                <label class="flex items-center p-4 border-2 border-gray-300 rounded-lg cursor-pointer hover:border-jogania transition">
+                                    <input type="radio" name="inquiry" value="partnership" class="mr-3 text-jogania focus:ring-jogania">
+                                    <div>
+                                        <div class="font-medium text-gray-800">Partnership</div>
+                                        <div class="text-sm text-gray-600">Business collaboration</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="relative">
+                            <textarea 
+                                id="message" 
+                                rows="5" 
+                                class="form-field w-full px-4 py-4 border-2 border-gray-300 rounded-lg focus:border-jogania focus:outline-none placeholder-transparent resize-none"
+                                placeholder="Tell us more about your needs..."
+                                required
+                            ></textarea>
+                            <label for="message" class="floating-label absolute left-4 top-4 text-gray-500 pointer-events-none">
+                                Tell us more about your needs... *
+                            </label>
+                        </div>
+
+                        <!-- Consent -->
+                        <div class="flex items-start gap-3">
+                            <input type="checkbox" id="consent" class="mt-1 text-jogania focus:ring-jogania" required>
+                            <label for="consent" class="text-sm text-gray-600">
+                                I agree to receive communications from Jogania and understand that I can opt out at any time. 
+                                By submitting this form, I agree to Jogania's 
+                                <a href="legal.html#privacy" class="text-jogania hover:underline">Privacy Policy</a> and 
+                                <a href="legal.html#terms" class="text-jogania hover:underline">Terms of Service</a>.
+                            </label>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button 
+                            type="submit" 
+                            class="w-full gradient-bg text-white py-4 rounded-lg font-semibold text-lg shadow-xl hover:shadow-2xl transition transform hover:scale-105"
+                        >
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="space-y-8">
+                <!-- Office Information -->
+                <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">🇹🇹 Trinidad & Tobago Office</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center text-white">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-gray-800">Address</div>
+                                <div class="text-gray-600">
+                                    123 Independence Square<br>
+                                    Port of Spain<br>
+                                    Trinidad & Tobago
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-gray-800">Phone</div>
+                                <div class="text-gray-600">
+                                    <a href="tel:+18685550100" class="hover:text-jogania transition">+1 (868) 555-0100</a><br>
+                                    <span class="text-sm">Mon-Fri: 8 AM - 6 PM (AST)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center text-white">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-gray-800">WhatsApp</div>
+                                <div class="text-gray-600">
+                                    <a href="https://wa.me/18685550101" class="hover:text-jogania transition">+1 (868) 555-0101</a><br>
+                                    <span class="text-sm">24/7 Support Available</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center text-white">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-gray-800">Email</div>
+                                <div class="text-gray-600">
+                                    <a href="mailto:hello@jogania.com" class="hover:text-jogania transition">hello@jogania.com</a><br>
+                                    <span class="text-sm">Response within 24 hours</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="bg-gradient-to-br from-jogania to-cyan-600 rounded-2xl p-8 text-white">
+                    <h3 class="text-xl font-bold mb-6">Quick Actions</h3>
+                    
+                    <div class="space-y-4">
+                        <a href="#" class="block bg-white/20 hover:bg-white/30 rounded-lg p-4 transition">
+                            <div class="flex items-center gap-3">
+                                <i class="fas fa-calendar text-xl"></i>
+                                <div>
+                                    <div class="font-semibold">Schedule a Demo</div>
+                                    <div class="text-sm opacity-90">See Jogania in action</div>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="block bg-white/20 hover:bg-white/30 rounded-lg p-4 transition">
+                            <div class="flex items-center gap-3">
+                                <i class="fas fa-play-circle text-xl"></i>
+                                <div>
+                                    <div class="font-semibold">Free Trial</div>
+                                    <div class="text-sm opacity-90">Start building your AI agent</div>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="faq.html" class="block bg-white/20 hover:bg-white/30 rounded-lg p-4 transition">
+                            <div class="flex items-center gap-3">
+                                <i class="fas fa-question-circle text-xl"></i>
+                                <div>
+                                    <div class="font-semibold">Browse FAQ</div>
+                                    <div class="text-sm opacity-90">Find instant answers</div>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="legal.html" class="block bg-white/20 hover:bg-white/30 rounded-lg p-4 transition">
+                            <div class="flex items-center gap-3">
+                                <i class="fas fa-shield-alt text-xl"></i>
+                                <div>
+                                    <div class="font-semibold">Security & Legal</div>
+                                    <div class="text-sm opacity-90">Compliance information</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Business Hours -->
+                <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">Business Hours</h3>
+                    
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Monday - Friday</span>
+                            <span class="font-semibold text-gray-800">8:00 AM - 6:00 PM</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Saturday</span>
+                            <span class="font-semibold text-gray-800">9:00 AM - 2:00 PM</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Sunday</span>
+                            <span class="font-semibold text-gray-800">Closed</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 p-4 bg-green-50 rounded-lg border border-green-200">
+                        <div class="text-sm text-green-800">
+                            <strong>🕒 Current Time in Trinidad & Tobago:</strong><br>
+                            <span id="currentTime">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Support Options -->
+        <div class="bg-white rounded-2xl p-12 shadow-xl border border-gray-200 mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Choose Your Support Channel</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We offer multiple ways to get the help you need, when you need it
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Live Chat -->
+                <div class="text-center p-8 border-2 border-gray-200 rounded-xl hover:border-jogania hover:shadow-lg transition">
+                    <div class="w-20 h-20 gradient-bg rounded-2xl flex items-center justify-center text-white text-3xl mx-auto mb-6">
+                        💬
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Live Chat</h3>
+                    <p class="text-gray-600 mb-6">
+                        Get instant help from our support team. Available during business hours for immediate assistance.
+                    </p>
+                    <button class="gradient-bg text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition">
+                        Start Chat
+                    </button>
+                </div>
+
+                <!-- Phone Support -->
+                <div class="text-center p-8 border-2 border-gray-200 rounded-xl hover:border-blue-500 hover:shadow-lg transition">
+                    <div class="w-20 h-20 bg-blue-600 rounded-2xl flex items-center justify-center text-white text-3xl mx-auto mb-6">
+                        📞
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Phone Support</h3>
+                    <p class="text-gray-600 mb-6">
+                        Speak directly with our Trinidad & Tobago team. Enterprise customers get 24/7 priority support.
+                    </p>
+                    <a href="tel:+18685550100" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                        Call Now
+                    </a>
+                </div>
+
+                <!-- Email Support -->
+                <div class="text-center p-8 border-2 border-gray-200 rounded-xl hover:border-purple-500 hover:shadow-lg transition">
+                    <div class="w-20 h-20 bg-purple-600 rounded-2xl flex items-center justify-center text-white text-3xl mx-auto mb-6">
+                        📧
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Email Support</h3>
+                    <p class="text-gray-600 mb-6">
+                        Send detailed questions and get comprehensive responses. Perfect for technical inquiries and documentation.
+                    </p>
+                    <a href="mailto:support@jogania.com" class="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition">
+                        Send Email
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Success Stories -->
+        <div class="bg-gradient-to-r from-jogania to-cyan-600 rounded-2xl p-12 text-white mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Join Successful Trinidad & Tobago Businesses</h2>
+                <p class="text-xl opacity-90 max-w-3xl mx-auto">
+                    See how local companies are transforming their customer service with Jogania AI Platform
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
+                    <div class="text-2xl mb-4">🏨</div>
+                    <h3 class="font-bold text-lg mb-2">Caribbean Resort Chain</h3>
+                    <p class="text-sm opacity-90 mb-4">
+                        "Jogania handles 80% of our booking inquiries automatically, freeing our staff to focus on guest experience."
+                    </p>
+                    <div class="text-xs opacity-75">- Resort Manager, Tobago</div>
+                </div>
+                
+                <div class="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
+                    <div class="text-2xl mb-4">🏪</div>
+                    <h3 class="font-bold text-lg mb-2">Local Retail Group</h3>
+                    <p class="text-sm opacity-90 mb-4">
+                        "Our WhatsApp sales increased 300% after implementing Jogania. Customers love the instant responses."
+                    </p>
+                    <div class="text-xs opacity-75">- CEO, Port of Spain</div>
+                </div>
+                
+                <div class="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
+                    <div class="text-2xl mb-4">🏦</div>
+                    <h3 class="font-bold text-lg mb-2">Financial Services</h3>
+                    <p class="text-sm opacity-90 mb-4">
+                        "Jogania ensures compliance while providing 24/7 customer support. It's been a game-changer."
+                    </p>
+                    <div class="text-xs opacity-75">- Operations Director, San Fernando</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center text-white font-bold">J</div>
+                        <div>
+                            <h3 class="font-bold text-xl">Jogania</h3>
+                            <p class="text-sm text-gray-400">AI Platform 🇹🇹</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4">Enterprise AI platform built for Caribbean businesses.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="features.html" class="hover:text-white transition">Features</a></li>
+                        <li><a href="pricing.html" class="hover:text-white transition">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white transition">API Docs</a></li>
+                        <li><a href="#" class="hover:text-white transition">Integrations</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="faq.html" class="hover:text-white transition">FAQ</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white transition">Status</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="legal.html#privacy" class="hover:text-white transition">Privacy</a></li>
+                        <li><a href="legal.html#terms" class="hover:text-white transition">Terms</a></li>
+                        <li><a href="legal.html#security" class="hover:text-white transition">Security</a></li>
+                        <li><a href="legal.html#compliance" class="hover:text-white transition">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">© 2024 Jogania. All rights reserved. Made in Trinidad & Tobago 🇹🇹</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Display current time in Trinidad & Tobago
+        function updateTime() {
+            const now = new Date();
+            const ttTime = new Date(now.toLocaleString("en-US", {timeZone: "America/Port_of_Spain"}));
+            const timeString = ttTime.toLocaleString('en-US', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                timeZoneName: 'short'
+            });
+            document.getElementById('currentTime').textContent = timeString;
+        }
+
+        // Update time every second
+        updateTime();
+        setInterval(updateTime, 1000);
+
+        // Form submission handler
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success message
+            const form = e.target;
+            const successMessage = document.createElement('div');
+            successMessage.className = 'bg-green-50 border border-green-200 text-green-800 p-6 rounded-lg mb-6';
+            successMessage.innerHTML = `
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-check-circle text-green-600 text-2xl"></i>
+                    <div>
+                        <h3 class="font-bold">Message Sent Successfully!</h3>
+                        <p class="text-sm">Thank you for contacting Jogania. We'll get back to you within 24 hours.</p>
+                    </div>
+                </div>
+            `;
+            
+            form.parentNode.insertBefore(successMessage, form);
+            form.reset();
+            
+            // Remove success message after 5 seconds
+            setTimeout(() => {
+                successMessage.remove();
+            }, 5000);
+        });
+
+        // Radio button styling
+        document.querySelectorAll('input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                // Remove active styling from all radio containers
+                document.querySelectorAll('input[name="inquiry"]').forEach(r => {
+                    r.closest('label').classList.remove('border-jogania', 'bg-jogania/5');
+                });
+                
+                // Add active styling to selected radio
+                if (this.checked) {
+                    this.closest('label').classList.add('border-jogania', 'bg-jogania/5');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+Response
+Created file /home/user/contact.html (34910 characters)
